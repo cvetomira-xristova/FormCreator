@@ -1,8 +1,16 @@
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes/routes";
+import { ThemeProvider } from "@material-ui/core/styles";
+import palette from './styles/Palette';
+
 function App() {
   return (
-    <h1>
-      Form Creator
-    </h1>
+    <ThemeProvider theme={palette}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
